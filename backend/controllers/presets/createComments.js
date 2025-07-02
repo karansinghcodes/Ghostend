@@ -6,7 +6,7 @@ import { response } from "../../utils/response.js"
 
 const createComments = async (req, res) => {
 
-    const count = req.params.count;
+    const count = req.query.count;
 
     if (count) {
         const comments = [];
@@ -35,7 +35,7 @@ const createComments = async (req, res) => {
 }
 
 //Route
-api.get("/get/comments/:count", "noauth", createComments);
+api.get("/get/comments", "noauth", createComments);
 
 
 

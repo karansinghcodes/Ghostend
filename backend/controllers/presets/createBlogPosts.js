@@ -6,7 +6,7 @@ import { response } from "../../utils/response.js"
 
 const createBlogPosts = async (req, res) => {
 
-    const count = req.params.count;
+    const count = req.query.count;
 
     if (count) {
         const blogPosts = [];
@@ -34,7 +34,7 @@ const createBlogPosts = async (req, res) => {
 }
 
 //Route
-api.get("/get/blog-posts/:count", "noauth", createBlogPosts);
+api.get("/get/blog-posts", "noauth", createBlogPosts);
 
 
 

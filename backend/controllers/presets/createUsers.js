@@ -5,7 +5,7 @@ import { response } from "../../utils/response.js"
 
 const createUsers = async (req, res) => {
 
-    const count = req.params.count;
+    const count = req.query.count;
 
     if (count) {
         const users = [];
@@ -31,4 +31,4 @@ const createUsers = async (req, res) => {
 }
 
 //Route
-api.get("/get/users/:count", "noauth", createUsers);
+api.get("/get/users", "noauth", createUsers);
