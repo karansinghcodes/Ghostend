@@ -1,20 +1,16 @@
 import { DataTypeMaper } from "./dataMaper.js";
+import { resolveValue } from "./resolveValue.js";
 
 export function generateData(schema, count = 1) {
-    const resData = []
+  const resData = [];
 
-    for (let i = 1; i <= count; i++) {
-
-        const data = {};
-        for (const [key, value] of Object.entries(schema)) {
-            data[key] = DataTypeMaper[value]()
-
-        }
-
-        resData.push(data);
-
+  for (let i = 0; i < count; i++) {
+    const data = {};
+    for (const [key, value] of Object.entries(schema)) {
+      data[key] = resolveValue(value);
     }
+    resData.push(data);
+  }
 
-    return resData;
-
+  return resData;
 }
