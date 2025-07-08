@@ -1,7 +1,7 @@
 import { api } from "../router/router.js";
 import { prisma } from "../utils/dbConnect.js";
 import { response } from "../utils/response.js";
-import { generateWithAi } from "../helpers/aiGeneration/openAi.js";
+import { generateWithAi } from "../helpers/aiGeneration/geminiAi.js";
 
 const registerApiWithAI = async (req, res) => {
   try {
