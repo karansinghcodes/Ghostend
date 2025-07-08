@@ -1,4 +1,3 @@
-import { DataTypeMaper } from "./dataMaper.js";
 import { resolveValue } from "./resolveValue.js";
 
 export function generateData(schema, count = 1) {

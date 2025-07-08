@@ -2,7 +2,7 @@ import { api } from "../router/router.js";
 import { prisma } from "../utils/dbConnect.js";
 import { response } from "../utils/response.js";
 
-const user = async (req, res) => {
+const registerApi = async (req, res) => {
   try {
     const data = req.body;
 
@@ -35,4 +35,4 @@ const user = async (req, res) => {
   }
 };
 
-api.post("/register-api", "noauth", user);
+api.post("/register-api", "noauth", registerApi);
