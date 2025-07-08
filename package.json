@@ -1,0 +1,10 @@
+{
+  "name": "ghostend",
+  "dependencies": {
+    "concurrently": "^9.2.0"
+  },
+  "scripts": {
+    "install-all": "npm --prefix backend install && npm --prefix frontend install",
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\""
+  }
+}
