@@ -7,9 +7,12 @@ import path from "path";
 
 const ai = new GoogleGenAI({ apiKey: configs.geminiApiKey });
 
+//The ES modules that use the import and export syntax do not have access to __dirname or __filename by default to fix this we use : 
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+//prompt path
 const filePath = path.resolve(__dirname, "../../prompt/dataGeneration.txt");
 
 export const generateWithAi = async (userMessage) => {
@@ -30,6 +33,7 @@ export const generateWithAi = async (userMessage) => {
     return data;
   } catch (error) {
     console.log(error.message);
-    throw new Error("Failed to retrieve data from openAI", error.message);
+    throw new Error("Failed to retrieve data from Gemeini Api",error.message);
   }
 };
+

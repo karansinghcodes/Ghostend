@@ -31,7 +31,7 @@ Each field must have a value that is one of the supported types below.
 
 
 Each value in the schema must be one of the following supported types (as a string):
-`"username"`, `"phonenumber"`, `"boolean"`, `"number"`, `"string"`, `"date"`, `"email"`, `"firstname"`, `"lastname"`, `"name"`, `"id"`, `"image"`, `"sentence"`, `"paragraph"`, `"job"`, `"address"`, `"city"`, `"country"`, `"currency"`, `"price"`, `"color"`, `"company"`, `"domain"`, `"ur"`, `"zipcode"`, `"state"`, `"latitude"`, `"longitude"`, `"product"`
+`"username"`, `"phonenumber"`, `"boolean"`, `"number"`, `"string"`, `"date"`, `"email"`, `"firstname"`, `"lastname"`, `"name"`, `"id"`, `"image"`, `"sentence"`, `"paragraph"`, `"job"`, `"address"`, `"city"`, `"country"`, `"currency"`, `"price"`, `"color"`, `"company"`, `"domain"`, `"url`, `"zipcode"`, `"state"`, `"latitude"`, `"longitude"`, `"product"`
 
 
 

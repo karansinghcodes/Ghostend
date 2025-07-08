@@ -1,6 +1,6 @@
-import { api } from "../router/router.js";
-import { prisma } from "../utils/dbConnect.js";
-import { response } from "../utils/response.js";
+import { api } from "../../router/router.js";
+import { prisma } from "../../utils/dbConnect.js";
+import { response } from "../../utils/response.js";
 
 const registerApi = async (req, res) => {
   try {
@@ -28,6 +28,8 @@ const registerApi = async (req, res) => {
       const apiRoute = `api/${type}/${endPoint}`;
 
       return response.ok(res, "Created Api Successfully", 201, apiRoute);
+    } else {
+      return response.error(res, "Invalid Data Sent", 400);
     }
   } catch (error) {
     console.error("Api register route Error : ", error.message);
