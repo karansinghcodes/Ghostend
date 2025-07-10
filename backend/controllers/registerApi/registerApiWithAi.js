@@ -11,7 +11,6 @@ const registerApiWithAI = async (req, res) => {
       const aiResponse = await generateWithAi(data.message);
       const date = new Date();
       const type = aiResponse.type;
-      console.log(type);
 
       const endPoint = `${date.getTime()}`;
 
@@ -31,9 +30,8 @@ const registerApiWithAI = async (req, res) => {
       const apiRoute = `api/${type}/${endPoint}`;
 
       return response.ok(res, "Created Api Successfully", 201, apiRoute);
-    }
-    else{
-      return response.error(res,"Invalid Data Sent",400);
+    } else {
+      return response.error(res, "Invalid Data Sent", 400);
     }
   } catch (error) {
     console.error("Api register with ai route Error : ", error.message);
